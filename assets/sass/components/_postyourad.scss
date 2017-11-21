@@ -1,0 +1,27 @@
+/* Post Your ADs Style */
+
+.ads {
+	&-postyourad {
+		background: url(../images/fence.jpg) no-repeat fixed;
+		background-size: cover;
+	}
+	&-post {
+		background: $Blue-08;
+		text-align: center;
+		color: $White;
+		padding: 50px 0px 150px 0px;
+		&-title {
+			@extend .title-font-26;
+			padding: 15px 0;
+		}
+		&-dec {
+			@extend .content-font-12;
+		}
+		&-action {
+			.btn {
+				@extend .post-your-ad-btn;
+				@extend .content-font-16;
+			}
+		}
+	}
+}

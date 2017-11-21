@@ -1,0 +1,43 @@
+/* Inner Page Layout */
+
+.page {
+	&-inner {
+		.ads {
+			&-inner {
+				&-header {
+					background: $Blue;
+					/* height: 250px; */
+					padding-top: 125px;
+					padding-bottom: 75px;
+				}
+				&-page {
+					&-title {
+						margin-top: 0px;
+						text-align: center;
+						color: $White;
+						@extend .title-font-44;
+					}
+					&-breadcrumbs {
+						text-align: center;
+						color: $White;
+						span {
+							margin-right: 5px;
+							font-size: 15px;
+						}
+					}
+				}
+				&-content {
+					background: $ADs-categories-bg;
+					.search {
+						&-form {
+							padding: 50px 0px;
+						}
+						&-result {
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

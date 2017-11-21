@@ -1,0 +1,167 @@
+/* Home page banner search bar style */
+
+.homepage {
+	&-searchbar {
+		&-slider {
+			position: relative;
+			@media #{$mobile} {
+				margin-top: 60px;
+			}
+		}
+	}
+}
+
+.searchbar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	@media #{$mobile} {
+		position: relative;
+		background: url(../images/bg-happyclients.jpg) no-repeat center;
+		background-size: cover;
+	}
+	&-bg {
+		background: $ADs-searchbar-bg;
+		padding: 0px;
+		overflow-y: auto;
+	}
+	&-categories {
+
+	}
+	&-category {
+		width: 14.285%;
+		float: left;
+		@media #{$tablet-below} {
+			/* width: 33.33%; */
+		}
+		@media #{$mobile} {
+			width: 50%;
+			#{$last} {
+				width: 100%;
+			}
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+			color: transparent;
+			text-align: center;
+			text-decoration: none;
+			padding: 15px;
+			border-right: 1px solid $Blue-border-lt;
+			border-bottom: 1px solid $Blue-border-lt;
+			@media #{$tablet} {
+				position: relative;
+			}
+			@media #{$mobile} {
+				color: $White;
+			}
+			.searchbar-image {
+				display: inline-block;
+				padding: 10px;
+				border-radius: 50px;
+				width: 75px;
+				height: 75px;
+				vertical-align: middle;
+				display: table-cell;
+				position: relative;
+				left: calc(50% - 5px);
+				@media #{$desktop} {
+					left: calc(50% - 20px);
+				}
+				@media #{$tablet} {
+					left: calc(50% - 35px);
+				}
+				@media #{$mobile} {
+					left: 0;
+					float: left;
+					width: 50px;
+					height: 50px;
+				}
+				img {
+					max-width: 50px;
+					max-height: 50px; 
+					@media #{$mobile} {
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
+			}
+			.searchbar-name {
+				display: block;
+				@media #{$tablet} {
+					position: absolute;
+					width: calc(100% - 30px);
+					text-align: center;
+				}
+				@media #{$mobile} {
+					float: left;
+					line-height: 50px;
+					margin-left: 15px;
+				}
+			}
+			&.active {
+				.searchbar-image {
+					background: $ADs-red;
+				}
+			}
+			&:hover, &:focus, &:active {
+				color: $White;
+				.searchbar-image {
+					background: $Blue;
+				}
+			}
+		}
+		#{$last} {
+			a {
+				border-right: 0px;
+			}
+		}
+	}
+	&-form {
+		padding: 15px;
+		float: left;
+		.input-group {
+			width: 86%;
+			float: left;
+			@media #{$mobile} {
+			    width: calc(100% - 100px);
+			}
+			.fa {
+				position: absolute;
+				right: 10px;
+				z-index: 11;
+				top: 10px;
+			}
+			&-btn {
+				vertical-align: top;
+				.btn {
+					padding: 10px 12px;
+					width: 153px;
+					text-align: left;
+					@media #{$mobile} {
+						width: auto;
+					}
+				}
+			}
+			input {
+				padding: 20px 12px;
+			}
+		}
+		.searchbar-action {
+			float: left;
+			width: 14%;
+			padding-left: 15px;
+			@media #{$mobile} {
+				width: 100px;
+			}
+			.btn {
+				float: right;
+				color: $White;
+				background: $ADs-red;
+				width: 100%;
+				border: none;
+				padding: 11px 12px;
+			}
+		}
+	}
+}

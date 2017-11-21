@@ -1,0 +1,134 @@
+/* ADs Location Product List Stlye */
+.ads-location {
+	.loc {
+		&-left-bar {
+			padding: 0px;
+			overflow-y: scroll;
+		}
+		&-header {
+			padding: 10px 10px;
+			color: $Grey;
+			.btn {
+				float: right;
+				border-radius: 3px;
+				@extend .btn-ads-red;
+				@extend .content-font-14;
+			}
+		}
+		&-searchbox {
+			padding: 10px;
+		}
+		&-country {
+			&-list {
+				max-height: 430px;
+				ul {
+					list-style: none;
+					padding-left: 0px;
+				}
+			}
+			&-link {
+				color: $Black;
+				display: inline-block;
+				padding: 15px;
+				width: 100%;
+				@extend .content-font-16;
+			}
+			&-name {
+				border-bottom: 1px solid $Grey;
+				#{$last} {
+					border-bottom: none;
+				}
+				#{$Hover} {
+					.loc-country-link {
+						background: $Grey-White;
+						color: $ADs-red;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		&-products {
+			&-search-list {
+				background: $White;
+				border: 1px solid $Grey;
+				margin-bottom: 75px;
+			}
+			&-items {
+				float: left;
+				padding: 0px 0 15px 0;
+				margin: 0px;
+				> div {
+					padding: 7px;
+				}
+				.item {
+					border: 1px solid $Grey;
+					#{$Hover} {
+						.loc-products-rat {
+							display: block;
+						}
+					}
+				}
+			}
+			&-image {
+				position: relative;
+				img {
+					width: 100%;
+				}
+			}
+			&-rat {
+				display: none;
+				position: absolute;
+				width: 100%;
+				bottom: 0px;
+				background: $Black-05;
+			}
+			&-star, &-favourite, &-viewmore {
+				float: left;
+				text-align: center;
+			}
+			&-star {
+				color: $Star-Yellow;
+				width: calc(50% - 20px);
+				padding: 10px 0px;
+				font-size: 12px;
+			}
+			&-favourite {
+				font-size: 20px;
+				width: 40px;
+				background: $Grey-White;
+				border-radius: 4px;
+				color: $ADs-red;
+				margin-top: -10px;
+				.fa {
+					font-weight: bold;
+				}
+			}
+			&-viewmore {
+				color: $White;
+				text-transform: uppercase;
+				text-decoration: none;
+				width: calc(50% - 20px);
+				padding: 12px 0px;
+				@extend .content-font-12;
+				a {
+					color: $White;
+					text-decoration: none;
+				}
+			}
+			&-detial {
+				padding: 15px;
+			}
+			&-name {
+				line-height: 22px;
+				height: 44px;
+				overflow: hidden;
+				@extend .title-font-16;
+			}
+			&-price {
+				color: $ADs-red;
+				line-height: 30px;
+				@extend .title-font-20;
+			}
+		}
+	}
+}

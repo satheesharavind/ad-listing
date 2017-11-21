@@ -1,0 +1,63 @@
+/* Carousel Styles */
+
+/* Home Page carousel/slider bootstrap redesign for ADs Listing theme */
+#bannerCarousel {
+	&.carousel {
+		margin-bottom: 0px;
+		@media #{$mobile} {
+			height: 350px;
+		}
+		@media #{$desktop-above} {
+			height: 780px;
+		}
+	}
+	.carousel {
+		margin-bottom: 0px;
+		@media #{$mobile} {
+			height: 350px;
+		}
+		@media #{$desktop-above} {
+			height: 780px;
+		}
+		&-inner {
+			.item {
+				@media #{$mobile} {
+					height: 350px;
+				}
+				@media #{$desktop-above} {
+					height: 780px;
+				}
+				img {
+					height: auto;
+				}
+			}
+		}
+		&-caption {
+			@media #{$tablet-above} {
+				top: calc(45% - 90px);
+			}
+			p {
+				font-weight: 200;
+				@extend .content-font-20;
+			}
+			h2 {
+				@extend .title-font-40;
+				line-height: 60px;
+				@media #{$tablet} {
+					line-height: 40px;
+					font-size: 30px;
+				}
+			}
+		}
+		&-learnmore {
+			@extend .post-your-ad-btn;
+		}
+		&-fullwidth {
+			background-color: $Blue-08;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+	}
+}

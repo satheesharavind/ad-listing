@@ -1,0 +1,86 @@
+/* ==================
+** Extend/Inheritance
+** ==================
+** This is one of the most useful features of Sass.
+** Using @extend lets you share a set of CSS properties from one selector to another.
+** It helps keep your Sass very DRY.
+** In our example we're going to create a simple series of messaging for errors, warnings and successes.
+*/
+
+/* Example:
+** SCSS
+	.message {
+	  border: 1px solid #ccc;
+	  padding: 10px;
+	  color: #333;
+	}
+
+	.success {
+	  @extend .message;
+	  border-color: green;
+	}
+** CSS
+	.message, .success {
+	  border: 1px solid #cccccc;
+	  padding: 10px;
+	  color: #333;
+	}
+*/
+
+/* Basic Font Styles */
+
+$i: 54;
+@while $i > 10 {
+	.title-font-#{$i} { 
+		font-size: #{$i}px;
+		line-height: #{$i}px;
+		font-weight: bold;
+	}
+	$i: $i - 2;
+}
+
+$i: 34;
+@while $i > 8 {
+	.content-font-#{$i} {
+		font-size: #{$i}px;
+		line-height: #{$i}px;
+	}
+	$i: $i - 2;
+}
+
+.btn-ads-red {
+	color: $ADs-red;
+	border-color: $ADs-red;
+	background: none;
+}
+
+.btn-ads-red-bg {
+	border: 0;
+	background: $ADs-red;
+	color: $White;
+	text-transform: uppercase;
+}
+
+.ads-sub-title {
+	text-align: center;
+	@extend .title-font-40;
+}
+.ads-dec {
+	text-align: center;
+	margin-bottom: 40px;
+	@extend .content-font-16;
+}
+
+.post-your-ad-btn {
+	background: $Blue-dr;
+	color: $White;
+	text-transform: uppercase;
+	border: 0px;
+	padding: 10px 20px;
+}
+
+.flat-design-style {
+	background: $White;
+	box-shadow: 0 0 5px $Grey-05;
+	margin-bottom: 25px;
+}

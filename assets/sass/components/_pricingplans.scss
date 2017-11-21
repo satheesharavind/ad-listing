@@ -1,0 +1,74 @@
+/* ADs pricing plans Styple */
+
+.ads-price-plans {
+	background: $ADs-categories-bg;
+	padding-bottom: 70px;
+	.plan {
+		&-type {
+			background: $White;
+			max-width: 350px;
+			margin: 15px auto 0 auto;
+			text-align: center;
+			#{$Hover} {
+				box-shadow: 0 0 15px 0px #ccc;
+				margin: 0px auto 0 auto;
+				.plan {
+					&-name {
+						padding-top: 30px;
+					}
+					&-price {
+						&-detail {
+							background: $ADs-red;
+							color: $White;
+						}
+					}
+					&-buynow {
+						.btn {
+							background: $White;
+							border: none;
+							color: $ADs-red;
+						}
+					}
+				}
+			}
+		}
+		&-name {
+			text-align: center;
+			padding: 15px;
+			@extend .content-font-20;
+		}
+		&-price {
+			margin-bottom: 15px;
+			@extend .title-font-32;
+			&-detail {
+				/* background: $Grey-White; */
+				background: $Grey-border-lt;
+				padding: 15px;
+			}
+		}
+		&-dollar {
+			vertical-align: top;
+			@extend .content-font-18;
+		}
+		&-validity {
+			font-weight: 300;
+			@extend .content-font-16;
+		}
+		&-buynow {
+			.btn {
+				background: none;
+				border: 1px solid $Grey;
+				text-transform: uppercase;
+				padding: 10px 30px;
+				@extend .title-font-16;
+			}
+		}
+		&-items {
+			padding: 10px 0;
+			list-style: none;
+				.item {
+					padding: 10px;
+				}
+		}
+	}
+}
