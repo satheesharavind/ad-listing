@@ -28,12 +28,43 @@
 				}
 				&-content {
 					background: $ADs-categories-bg;
+					padding-top: 70px;
+					padding-bottom: 50px;
 					.search {
 						&-form {
 							padding: 50px 0px;
 						}
 						&-result {
 
+						}
+					}
+				}
+			}
+			&-profile {
+				.profile {
+					&-contact {
+						padding-left: 75px;
+						label {
+							color: $Grey;
+							margin-top: 30px;
+						}
+						.location, .phone, .website {
+							color: $Black;
+							line-height: 45px;
+							padding-left: 35px;
+							background-repeat: no-repeat;
+							background-position-y: center;
+							@extend .content-font-16;
+						}
+						.location {
+							background-image: url('../images/loc-icon.png');
+							
+						}
+						.phone {
+							background-image: url('../images/phone-icon.png');
+						}
+						.website {
+							background-image: url('../images/link-icon.png');	
 						}
 					}
 				}

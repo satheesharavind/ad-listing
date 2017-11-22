@@ -10,6 +10,9 @@
 				list-style: none;
 				padding: 0px;
 			}
+			li {
+
+			}
 			.item {
 				text-align: center;
 				width: 25%;
@@ -18,6 +21,10 @@
 				font-weight: bold;
 				color: $Grey-dr;
 				margin-top: 50px;
+				@media #{$mobile} {
+					margin-top: 25px;
+					margin-bottom: 25px;
+				}
 				span {
 					color: $Black;
 					height: 50px;
@@ -45,6 +52,9 @@
 			background: $Grey-dr;
 			margin: -50px auto 0 auto;
 			overflow: hidden;
+			@media #{$mobile} {
+				margin-top: 0px;
+			}
 		}
 		&-name {
 			text-transform: uppercase;
@@ -66,6 +76,9 @@
 				border-radius: 40px;
 				background-color: $Grey-dr;
 				margin-bottom: -20px;
+				@media #{$mobile} {
+					margin-bottom: 0;
+				}
 				&.facebook {
 					background-image: url('../images/social-icons.png');
 				}
@@ -78,6 +91,74 @@
 					background-position: right;
 				}
 			}
+		}
+		&-editer {
+			.btn {
+				color: $ADs-red;
+				border: none;
+				margin-bottom: -15px;
+				text-transform: uppercase;
+				padding: 10px 20px;
+				@extend .title-font-14;
+				@extend .flat-design-style;
+			}
+		}
+	}
+}
+
+.user,
+.seller {
+	&-contact {
+		padding: 15px;
+		background: $White;
+		.form-action {
+			.btn {
+				@extend .btn-ads-red-bg;
+				width: 100%;
+				font-size: 14px;
+				padding: 15px 0px;
+			}
+		}
+	}
+	&-alladds {
+		&-items {
+			> div {
+				padding: 0px 20px 20px 0px;
+				@media #{$mobile} {
+					padding: 10px;
+				}
+			}
+			border: 0px;
+			.item {
+				@extend .flat-design-style;
+			}
+		}
+	}
+}
+.user {
+	&-log {
+		background: $White;
+		padding: 25px 0;
+		ul {
+			list-style-position: inside;
+			color: $Grey;
+			padding: 0 15px;
+		}
+		&-date {
+			color: $Grey;
+			display: inline-block;
+			@extend .title-font-12;
+		}
+		&-name {
+			color: $Black;
+			border-left: 1px solid $Grey;
+			line-height: 22px;
+			padding-left: 20px;
+			margin: 5px 3px;
+			@extend .content-font-14;
+		}
+		&-detail {
+			/* border-right: 1px solid $Grey; */
 		}
 	}
 }

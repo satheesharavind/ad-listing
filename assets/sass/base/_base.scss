@@ -45,3 +45,10 @@ input, select {
 .yellow-text {
 	color: $Yellow;
 }
+
+.page {
+	&-sub-title {
+		margin-bottom:  25px;
+		@extend .title-font-16;
+	}
+}

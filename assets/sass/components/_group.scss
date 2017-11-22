@@ -1,0 +1,72 @@
+.user-alladds, .seller-alladds, .loc-products {
+	&-items {
+		.item {
+			background: $White;
+			#{$Hover} {
+				[class*="-rat"] {
+					display: block;
+				}
+			}
+		}
+	}
+	&-image {
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+	&-rat {
+		display: none;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		background: $Black-05;
+	}
+	&-star, &-favourite, &-viewmore {
+		float: left;
+		text-align: center;
+	}
+	&-star {
+		color: $Star-Yellow;
+		width: calc(50% - 20px);
+		padding: 10px 0px;
+		font-size: 12px;
+	}
+	&-favourite {
+		font-size: 20px;
+		width: 40px;
+		background: $Grey-White;
+		border-radius: 4px;
+		color: $ADs-red;
+		margin-top: -10px;
+		.fa {
+			font-weight: bold;
+		}
+	}
+	&-viewmore {
+		color: $White;
+		text-transform: uppercase;
+		text-decoration: none;
+		width: calc(50% - 20px);
+		padding: 12px 0px;
+		@extend .content-font-12;
+		a {
+			color: $White;
+			text-decoration: none;
+		}
+	}
+	&-detial {
+		padding: 15px;
+	}
+	&-name {
+		line-height: 22px;
+		height: 44px;
+		overflow: hidden;
+		@extend .title-font-16;
+	}
+	&-price {
+		color: $ADs-red;
+		line-height: 30px;
+		@extend .title-font-20;
+	}
+}

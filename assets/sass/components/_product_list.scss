@@ -36,6 +36,10 @@
 				padding: 10px;
 				width: 100%;
 				float: left;
+				position: relative;
+				@media #{$mobile-port} {
+					text-align: center;
+				}
 				@extend .flat-design-style;
 				.product-image {
 					padding: 0pc;
@@ -47,6 +51,12 @@
 			border-radius: 5px;
 			display: inline-block;
 			padding: 7px;
+			position: absolute;
+			bottom: 10px;
+			@media #{$mobile-port} {
+				position: static;
+				margin-bottom: 15px;
+			}
 			&-price, &-btn {
 				display: inline-block;
 			}
@@ -67,20 +77,41 @@
 	}
 	&-verifiedSeller {
 		float: right;
-		color: $Green;
-		@extend .title-font-12;
 		font-style: italic;
+		color: $Green;
+		position: absolute;
+		padding: 5px 0px 15px 30px;
+		bottom: 10px;
+		right: 10px;
+		background-image: url('../images/verified-seller.png');
+		background-repeat: no-repeat;
+		@media #{$mobile-port} {
+			position: static;
+			float: none;
+			max-width: 100px;
+			margin: 0 auto;
+		}
+		@extend .title-font-12;
 	}
 	&-image {
-
+		@media #{$mobile-port} {
+			width: 100%
+		}
 	}
 	&-detail {
 		padding-right: 0;
+		position: static;
+		@media #{$mobile-port} {
+			width: 100%
+		}
 	}
 	&-name {
 		color: $Blue;
 		@extend .title-font-16;
 		margin-bottom: 5px;
+		@media #{$mobile-port} {
+			margin-top: 10px;
+		}
 		a {
 			color: $Blue;
 		}
@@ -90,6 +121,10 @@
 	}
 	&-option {
 		text-align: right;
+		@media #{$mobile-port} {
+			text-align: center;
+			margin-bottom: 10px;
+		}
 	}
 	&-viewsCount, &-postDate, &-favorite {
 		display: inline-block;
@@ -101,12 +136,16 @@
 		border-right: 1px solid $Grey;
 	}
 	&-postDate {
-
+		margin-right: 5px;
 	}
 	&-favorite {
 
 	}
 	&-description {
-
+		padding-bottom: 30px;
+		text-align: left;
+		@media #{$mobile-port} {
+			padding-bottom: 0;
+		}
 	}
 }
